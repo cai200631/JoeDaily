@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!--drawerLayout其实是一个布局控件，跟LinearLayout等控件是一种东西，但是drawerLayout带有滑动的功能。-->
+    <!--只要按照drawerLayout的规定布局方式写完布局，就能有侧滑的效果。-->
+    <!--主内容区的布局代码要放在侧滑菜单布局的前面,这可以帮助DrawerLayout判断谁是侧滑菜单，谁是主内容区；-->
+    <!--侧滑菜单的部分的布局（这里是ListView）可以设置layout_gravity属性，他表示侧滑菜单是在左边还是右边。-->
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/content_layout"/>
+
+    <include layout="@layout/drawer_layout"/>
+
+
+</android.support.v4.widget.DrawerLayout>
